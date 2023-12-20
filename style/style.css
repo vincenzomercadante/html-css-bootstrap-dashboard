@@ -4,7 +4,7 @@
 
     /* layouts */
     --header-height: 80px;
-    --sidebar-width: 120px;
+    --sidebar-width: 200px;
 }
 
 /* ! generics */
@@ -18,6 +18,30 @@ body{
 #header{
     min-height: var(--header-height);
 }
+
+#nav .search-icon{
+    display: block;
+    position: absolute;
+    z-index: 2;
+    line-height: 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    text-align: center;
+    color: black;
+}
+
+#nav .form-control{
+    padding-left: 2.4rem;
+}
+
+#header .fa-bell{
+    color: goldenrod;
+}
+
+#header .dropdown-menu{
+    transform: translate(-90% , 10px);
+}
+
 
 /* ! main */
 

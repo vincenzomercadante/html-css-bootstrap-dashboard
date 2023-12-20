@@ -14,8 +14,62 @@
     </head>
     <body>
         <!-- header -->
-        <header id="header">           
+        <header id="header" class="py-3"> 
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg" id="nav">
+                <!-- container -->
+                <div class="container-fluid d-flex align-items-center">
+                    <!-- nav title -->
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/logo.svg" alt="" class="img-fluid">
+                    </a>
+                    <!-- search bar -->
+                    <form class="d-flex flex-grow-1 mx-3" role="search">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input class="form-control me-2 bg-secondary-subtle" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <!-- contenitore lista icon e dropdown-->
+                    <div class="ms-auto d-flex fs-5">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-none d-lg-flex">
+                            <li class="nav-item  me-3">
+                                <a class="nav-link p-0" href="#">
+                                    <i class="fa-solid fa-list-ul"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item d-lg-block me-3">
+                                <a class="nav-link p-0" href="#">
+                                    <i class="fa-solid fa-circle-question"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link p-0" href="#">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- dropdown icon -->
+                        <div class="dropdown">
+                            <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-bell"></i>    
+                            </a>
+                            <!-- dropdown menu -->
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
         </header>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
         <!-- app main-container -->
         <div id="app-container" class="d-flex">
             <!-- sidebar -->
