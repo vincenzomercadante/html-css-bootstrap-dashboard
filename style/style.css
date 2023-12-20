@@ -4,7 +4,7 @@
 
     /* layouts */
     --header-height: 80px;
-    --sidebar-width: 200px;
+    --sidebar-width: 120px;
 }
 
 /* ! generics */
@@ -48,8 +48,16 @@ body{
 /* ? sidebar */
 #sidebar{
     background-color: #051e34;
+    background-image: url(../img/sidebar-bg.png);
     height: calc(100vh - var(--header-height));
     width: var(--sidebar-width);
+}
+
+#sidebar .btn{
+    color: white;
+    display: flex;
+    align-items: center;
+    border: 0;
 }
 
 /* ? app-content */
@@ -57,4 +65,10 @@ body{
     background-color: var(--content-header-bg);
     height: calc(100vh - var(--header-height));
     width: calc(100% - var(--sidebar-width));
+}
+
+@media screen and (min-width: 992px){
+    :root{
+        --sidebar-width: 200px
+    }
 }
