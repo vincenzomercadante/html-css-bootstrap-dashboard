@@ -1,0 +1,36 @@
+:root{
+    /* palette */
+    --content-header-bg: #1b72e8;
+
+    /* layouts */
+    --header-height: 80px;
+    --sidebar-width: 120px;
+}
+
+/* ! generics */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+
+/* ! header */
+#header{
+    min-height: var(--header-height);
+}
+
+/* ! main */
+
+/* ? sidebar */
+#sidebar{
+    background-color: #051e34;
+    height: calc(100vh - var(--header-height));
+    width: var(--sidebar-width);
+}
+
+/* ? app-content */
+#main{
+    background-color: var(--content-header-bg);
+    height: calc(100vh - var(--header-height));
+    width: calc(100% - var(--sidebar-width));
+}
