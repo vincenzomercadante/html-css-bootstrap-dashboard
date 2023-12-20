@@ -1,10 +1,12 @@
 :root{
     /* palette */
     --content-header-bg: #1b72e8;
+    --badge-color: #1559b6;
 
     /* layouts */
     --header-height: 80px;
     --sidebar-width: 120px;
+    --main-header-height: 150px;
 }
 
 /* ! generics */
@@ -62,13 +64,26 @@ body{
 
 /* ? app-content */
 #main{
-    background-color: var(--content-header-bg);
     height: calc(100vh - var(--header-height));
     width: calc(100% - var(--sidebar-width));
+}
+
+#main .app-main-header{
+    background-color: var(--content-header-bg);
+    color: white;
+}
+
+
+#main .app-main-header .badge{
+    background-color: var(--badge-color);
 }
 
 @media screen and (min-width: 992px){
     :root{
         --sidebar-width: 200px
+    }
+
+    .offcanvas{
+        width: 25% !important;
     }
 }
