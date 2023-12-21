@@ -1,27 +1,27 @@
-:root{
+:root {
     /* palette */
     --content-header-bg: #1b72e8;
     --badge-color: #1559b6;
 
     /* layouts */
     --header-height: 80px;
-    --sidebar-width: 120px;
+    --sidebar-width: 80px;
     --main-header-height: 150px;
 }
 
 /* ! generics */
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
 }
 
 
 /* ! header */
-#header{
+#header {
     min-height: var(--header-height);
 }
 
-#nav .search-icon{
+#nav .search-icon {
     display: block;
     position: absolute;
     z-index: 2;
@@ -32,30 +32,31 @@ body{
     color: black;
 }
 
-#nav .form-control{
+#nav .form-control {
     padding-left: 2.4rem;
 }
 
-#header .fa-bell{
+#header .fa-bell {
     color: goldenrod;
 }
 
-#header .dropdown-menu{
-    transform: translate(-90% , 10px);
+#header .dropdown-menu {
+    left: auto;
+    right: 0;
 }
 
 
 /* ! main */
 
 /* ? sidebar */
-#sidebar{
+#sidebar {
     background-color: #051e34;
     background-image: url(../img/sidebar-bg.png);
     height: calc(100vh - var(--header-height));
     width: var(--sidebar-width);
 }
 
-#sidebar .btn{
+#sidebar .btn {
     color: white;
     display: flex;
     align-items: center;
@@ -63,27 +64,72 @@ body{
 }
 
 /* ? app-content */
-#main{
+#main {
     height: calc(100vh - var(--header-height));
     width: calc(100% - var(--sidebar-width));
+    overflow: auto;
+    background-color: #f8f9fa;
 }
 
-#main .app-main-header{
+#main .app-main-header {
     background-color: var(--content-header-bg);
     color: white;
 }
 
 
-#main .app-main-header .badge{
+#main .app-main-header .badge {
     background-color: var(--badge-color);
 }
 
-@media screen and (min-width: 992px){
-    :root{
+#main .accordion-item {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+
+#app-content .col-lenght {
+    width: 50%;
+}
+
+
+#app-content td {
+    font-size: 0.9rem;
+}
+
+#app-content tr {
+    line-height: 1.5rem;
+    vertical-align: middle;
+}
+
+#app-content .user-icon {
+    border-radius: 50%;
+    background-color: #f26653;
+    color: white;
+    width: 30px;
+    aspect-ratio: 1;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+#main .offcanvas-body {
+    overflow: auto;
+}
+
+@media screen and (min-width: 803px) {
+    #app-content .col-lenght {
+        width: 60%;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    :root {
         --sidebar-width: 200px
     }
 
-    .offcanvas{
+    .offcanvas {
         width: 25% !important;
     }
 }
