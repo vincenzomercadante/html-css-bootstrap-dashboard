@@ -48,7 +48,7 @@ body {
 
 /* ! main */
 
-/* ? sidebar */
+/* | sidebar */
 #sidebar {
     background-color: #051e34;
     background-image: url(../img/sidebar-bg.png);
@@ -63,7 +63,7 @@ body {
     border: 0;
 }
 
-/* ? app-content */
+/* | app-content */
 #main {
     height: calc(100vh - var(--header-height));
     width: calc(100% - var(--sidebar-width));
@@ -117,13 +117,14 @@ body {
     overflow: auto;
 }
 
+/* | custom media query */
 @media screen and (min-width: 803px) {
     #app-content .col-lenght {
         width: 60%;
     }
 }
 
-
+/* |  media query large screen */
 @media screen and (min-width: 992px) {
     :root {
         --sidebar-width: 200px
